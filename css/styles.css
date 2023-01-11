@@ -9,3 +9,103 @@ body{
     font-family: 'Roboto', sans-serif; 
 }
 
+.main-header {
+    background-color: bisque;
+}
+
+.url-links {
+    color: darkred;
+    text-decoration: overline;
+    font-weight: 900;
+}
+
+.url-links:hover {
+    color: dodgerblue;
+}
+
+.list {
+    display: flex;
+    margin: 10px;
+    columns: 4;
+    list-style: none;
+    text-align: center;
+}
+
+.list-item {
+    margin: 5px;
+}
+
+.profile-pic-container {
+    margin: 15px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 340px;
+    height: 360px;
+}
+
+.name-cont {
+    margin: 15px;
+    background-color: #85C1E9;
+}
+
+.name {
+    color: indianred;
+    text-align: center;
+}
+
+.name-2 {
+    color: #117A65;
+}
+
+.title {
+    text-align: center;
+}
+
+.contact-cont {
+    margin: 15px;
+}
+
+.social-media {
+    height: 30px;
+    width: 30px;
+}
+
+.tech-skills {
+    margin: 15px;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.list-element {
+    display: flex;
+    margin-top: 3px;
+}
+
+.tech-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.list-element-label {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.list-element-label-2 {
+    margin-top: 5px;
+    margin-left: 4px;
+}
+
+.list-element-label-3 {
+    margin-top: 6px;
+    margin-left: 4px;
+}
+
+.list-element-label-4 {
+    margin-top: 7px;
+    margin-left: 5px;
+}

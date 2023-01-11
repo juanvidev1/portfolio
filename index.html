@@ -6,58 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juanvi Portfolio</title>
     <meta name="description" content="This is my portfolio">
-    <meta name="author" content="Juanvi"
-    <link rel="stylesheet" href="./css/styles.css"
+    <meta name="author" content="Juanvi">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav>
-            <ul>
-                <li>
-                    <a href="./contact.html">Contact</a>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="./contact.html" class="url-links">Contact</a>
                 </li>
-                <li>
-                    <a href="./projects.html">Projects</a>
+                <li class="list-item">
+                    <a href="./projects.html" class="url-links">Projects</a>
                 </li>
-                <li>
-                    <a href="./blog.html">Blog</a>
+                <li class="list-item">
+                    <a href="./blog.html" class="url-links">Blog</a>
                 </li>
-                <li>
-                    <a href="./aboutme.html">About me</a>
+                <li class="list-item">
+                    <a href="./aboutme.html" class="url-links">About me</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <div>
-            <img src="https://pixabay.com/images/id-7534634/" alt="Mi foto de perfil">
+        <div class="profile-pic-container">
+            <img src="./assets/ProfilePicture.JPG" alt="Mi foto de perfil" class="profile-pic">
         </div>
-        <div>
-            <h2>JuanviDev portfolio</h2>
-            <p>Junior Developer</p>
+        <div class="name-cont">
+            <h2 class="name">JuanviDev <span class="name-2">portfolio</span></h2>
+            <p class="title">Junior Developer</p>
         </div>
-        <div>
+        <div class="contact-cont">
             <a href="./contact.html">Contacto</a>
             <a href="./aboutme.html">About me</a>
         </div>
         <div>
-            <ul>
-                <li>
-                    <a href="">Twitter</a>
-                    <a href="">LinkedIn</a>
-                    <a href="">Instagram</a>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="www.linkedin.com/in/juanvidevreyes"><img src="./assets/linkedin.svg" alt="linkedin" class="social-media"></a>
+                </li>
+                <li class="list-item">
+                    <a href="https://twitter.com/JuanviReyes"><img src="./assets/twitter.svg" alt="Twitter" class="social-media"></a>
+                </li>
+                <li class="list-item">
+                    <a href="https://www.instagram.com/juanvireyes1/"><img src="./assets/instagram.svg" alt="Instagram" class="social-media"></a>
                 </li>
             </ul>
         </div>
-        <div>
-            <ul>
-                <li><img src="" alt="Python">Python</li>
-                <li><img src="" alt="Html">HTML</li>
-                <li><img src="" alt="JavaScript">JavaScript</li>
-                <li><img src="" alt="PHP">PHP</li>
+        <div class="tech-skills">
+            <ul class="skills-list">
+                <li>
+                    <div class="list-element">
+                        <div>
+                            <img src="./assets/python.svg" alt="Python" class="tech-icon">
+                        </div>
+                        <div class="list-element-label">
+                            Python
+                        </div>
+                    <div>
+                </li>
+                <li>
+                    <div class="list-element">
+                        <div>
+                            <img src="./assets/html.svg" alt="HTML" class="tech-icon">
+                        </div>
+                        <div class="list-element-label-2">
+                            HTML
+                        </div>
+                    <div>
+                </li>
+                <li>
+                    <div class="list-element">
+                        <div>
+                            <img src="./assets/css.svg" alt="CSS" class="tech-icon">
+                        </div>
+                        <div class="list-element-label-3">
+                            CSS
+                        </div>
+                    <div>
+                </li>
+                <li>
+                    <div class="list-element">
+                        <div>
+                            <img src="./assets/iconJS.svg" alt="JavaScript" class="tech-icon">
+                        </div>
+                        <div class="list-element-label-4">
+                            JavaScript
+                        </div>
+                    <div>
+                </li>
+                <li>
+                    <div class="list-element">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP" class="tech-icon">
+                        </div>
+                        <div class="list-element-label-4">
+                            PHP
+                        </div>
+                    <div>
+                </li>
             </ul>
         </div>  
     </main>
