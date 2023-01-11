@@ -67,6 +67,18 @@ body{
     margin: 15px;
 }
 
+.social-media-list {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.social-list-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .social-media {
     height: 30px;
     width: 30px;
@@ -74,15 +86,21 @@ body{
 
 .tech-skills {
     margin: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .skills-list {
     list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 .list-element {
     display: flex;
-    margin-top: 3px;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .tech-icon {
