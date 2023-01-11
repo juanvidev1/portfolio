@@ -53,6 +53,8 @@ body{
 .name {
     color: indianred;
     text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
 }
 
 .name-2 {
@@ -61,6 +63,8 @@ body{
 
 .title {
     text-align: center;
+    font-size: x-large;
+    font-weight: 650;
 }
 
 .contact-cont {
@@ -88,6 +92,16 @@ body{
     margin: 15px;
     align-items: center;
     justify-content: center;
+    background-color: #85C1E9;
+}
+
+.tech-skills-title {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #117A65;
 }
 
 .skills-list {
@@ -126,4 +140,16 @@ body{
 .list-element-label-4 {
     margin-top: 7px;
     margin-left: 5px;
+}
+
+.tech-skills-2 {
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-skills-3 {
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
 }
