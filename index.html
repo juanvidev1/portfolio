@@ -10,51 +10,102 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
+        <img src="./assets/three-horizontal-lines-icon.svg" alt="hamburger-menu" class="menu-icon">
+
         <nav>
             <ul class="list">
                 <li class="list-item">
-                    <a href="./contact.html" class="url-links">Contact</a>
+                    <a href="#" class="url-links inactive" id="aboutme">Acerca de Juanvi</a>
                 </li>
                 <li class="list-item">
-                    <a href="./projects.html" class="url-links">Projects</a>
+                    <a href="#" class="url-links" id="projects">Proyectos</a>
                 </li>
                 <li class="list-item">
-                    <a href="./blog.html" class="url-links">Blog</a>
-                </li>
-                <li class="list-item">
-                    <a href="./aboutme.html" class="url-links">About me</a>
+                    <a href="./blog.html" class="url-links" id="blog">Noticias</a>
                 </li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <div class="profile-pic-container">
-            <img src="./assets/ProfilePicture.JPG" alt="Mi foto de perfil" class="profile-pic">
+
+        <div class="lang-container" id="lang-container">
+            <img src="./assets/us.svg" alt="US" class="language-selector">
         </div>
+
+    </header>
+
+    <!-- Menu mobile -->
+    <aside class="mobile-menu inactive">
+        <ul class="list">
+            <li class="list-item inactive" id="aboutme-mobile">
+                <a href="#" class="url-links">Sobre Juanvi</a>
+            </li>
+            <li class="list-item" id="projects-mobile">
+                <a href="#" class="url-links">Proyectos</a>
+            </li>
+            <li class="list-item">
+                <a href="./blog.html" class="url-links" id="blog-mobile">Blog</a>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        
         <div class="name-cont">
-            <h2 class="name">JuanviDev <span class="name-2">portfolio</span></h2>
+            <h2 class="name">Juan Vicente Reyes - JuanviDev</h2>
             <p class="title">Junior Developer</p>
         </div>
-        <div>
-            <ul class="social-media-list">
-                <li class="social-list-item">
-                    <a href="www.linkedin.com/in/juanvidevreyes"><img src="./assets/linkedin.svg" alt="linkedin" class="social-media"></a>
-                </li>
-                <li class="social-list-item">
-                    <a href="https://twitter.com/JuanviReyes"><img src="./assets/twitter.svg" alt="Twitter" class="social-media"></a>
-                </li>
-                <li class="social-list-item">
-                    <a href="https://www.instagram.com/juanvireyes1/"><img src="./assets/instagram.svg" alt="Instagram" class="social-media"></a>
-                </li>
-            </ul>
+
+        <div class="container">
+            <div class="profile-pic-container">
+                <img src="./assets/ProfilePicture.JPG" alt="Mi foto de perfil" class="profile-pic">
+
+                <ul class="social-media-list">
+                    <li class="social-list-item">
+                        <a href="https://www.linkedin.com/in/juanvidevreyes/" target="_blank"><img src="./assets/linkedin.svg" alt="linkedin" class="social-media"></a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="https://twitter.com/JuanviReyes" target="_blank"><img src="./assets/twitter.svg" alt="Twitter" class="social-media"></a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="https://github.com/juanvidev1?tab=repositories" target="_blank"><img src="./assets/github-mark.svg" alt="Instagram" class="social-media"></a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="aboutme">
+                <div id="aboutme-content">
+                    <h1 class="content-title">Sobre Juanvi</h1>
+                    <p class="content-paragraph">
+                        Soy un apasionado desarrollador web con 2 años de experiencia en la creación de soluciones digitales cautivadoras. Mi enfoque va más allá del 
+                        simple código; me esfuerzo por dar vida a experiencias en línea impactantes y funcionales. He trabajado en diversos proyectos donde he aplicado 
+                        mi habilidad para traducir conceptos creativos en código limpio y eficiente. Mi destreza abarca tanto el front-end como el back-end, utilizando 
+                        tecnologías como HTML, CSS, JavaScript, Node.js, PHP y Python. Además de mi habilidad técnica, poseo una mentalidad proactiva y orientada a resultados que 
+                        me impulsa a enfrentar desafíos con creatividad y resiliencia. Mi compromiso con el aprendizaje continuo y mi capacidad para colaborar efectivamente 
+                        en equipos multidisciplinarios son pilares fundamentales de mi enfoque profesional. Estoy ansioso por contribuir con mi experiencia y energía a un 
+                        equipo innovador donde pueda seguir desarrollándome y aportando al crecimiento conjunto.
+                    </p>
+
+                    <ul class="experience-content">
+                        <li>
+                            Desarrollador web - <span>Commit</span>
+                        </li>
+                        <li>2021 - Actualidad</li>
+                    </ul>
+                </div>
+
+                <div id="projects-content" class="inactive">
+                    
+                </div>
+            </div>
+            
         </div>
+        
         <div class="tech-skills">
             <h1 class="tech-skills-title">Technical Skills</h1>
-            <div>
+            <div class="tech-skills-1">
                 <ul class="skills-list">
                     <li>
                         <div class="list-element">
@@ -108,6 +159,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="tech-skills-2">
                 <ul class="skills-list">
                     <li>
@@ -162,6 +214,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="tech-skills-3">
                 <ul class="skills-list">
                     <li>
@@ -196,7 +249,9 @@
                     </li>
                 </ul>
             </div>
-        </div>  
+        </div>
     </main>
+
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

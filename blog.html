@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog de Juanvi</title>
+    <link rel="stylesheet" href="./css/blog-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer src="./scripts/blog-script.js"></script>
 </head>
 <body>
-    
+    <header class="main-header">
+      <nav>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="/" class="url-links" id="aboutme">Volver</a>
+                </li>
+        </nav>
+
+        <div class="lang-container" id="lang-container">
+            <img src="./assets/us.svg" alt="US" class="language-selector">
+        </div>
+
+    </header>
+
+    <main class="main-container" id="main-container">
+
+        <!-- <aside class="categories" id="categories">
+            <div>Hola</div>
+        </aside> -->
+
+        <div id="news-container">
+            <h2 class="news-cont-title">News List</h2>
+            <div class="country-selector-cont">
+                <label for="countries">Select your country</label>
+                <select id="country-selector">
+                </select>
+            </div>
+            <table class="news-table">
+                <thead id="table-header">
+                    <tr>
+                        <td>Date</td>
+                        <td>Article</td>
+                    </tr>
+                </thead>
+                <tbody id="news-table-body">
+                    <!-- <tr>
+                        <td>11-11-2023</td>
+                        <td>Este es un título de noticia</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+        
+    </main>
 </body>
 </html>

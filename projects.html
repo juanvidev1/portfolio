@@ -4,9 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyectos</title>
+    <style>
+        :root {
+        --main-color: white;
+        --secondary-color: dodgerblue; /* Estaba en #85C1E9 */
+        --font: 'Lato', sans-serif;
+        }
+
+        .inactive {
+            display: none;
+        }
+
+        .aboutme {
+            background-color: var(--secondary-color);
+            width: 100%;
+            height: 100%;
+            margin: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            text-align: justify;
+            font-family: var(--font);
+            color: var(--main-color);
+            font-size: large;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="aboutme">
+        <div class="content">
+            <h1 class="content-title">Sobre mi</h1>
+            <p class="content-paragraph inactive">
+                Soy un apasionado desarrollador web con 2 años de experiencia en la creación de soluciones digitales cautivadoras. Mi enfoque va más allá del 
+                simple código; me esfuerzo por dar vida a experiencias en línea impactantes y funcionales. He trabajado en diversos proyectos donde he aplicado 
+                mi habilidad para traducir conceptos creativos en código limpio y eficiente. Mi destreza abarca tanto el front-end como el back-end, utilizando 
+                tecnologías como HTML, CSS, JavaScript, Node.js, PHP y Python. Además de mi habilidad técnica, poseo una mentalidad proactiva y orientada a resultados que 
+                me impulsa a enfrentar desafíos con creatividad y resiliencia. Mi compromiso con el aprendizaje continuo y mi capacidad para colaborar efectivamente 
+                en equipos multidisciplinarios son pilares fundamentales de mi enfoque profesional. Estoy ansioso por contribuir con mi experiencia y energía a un 
+                equipo innovador donde pueda seguir desarrollándome y aportando al crecimiento conjunto.
+            </p>
+
+            <p class="experiencia inactive">
+                <ul>
+                    <li>
+                        Desarrollador web - <span>Soundlutions</span>
+                    </li>
+                    <li>2021 - Actualidad</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <script src="./scripts/test.js"></script>
 </body>
 </html>

@@ -1,76 +1,189 @@
+:root {
+    --main-color: white;
+    --secondary-color: dodgerblue; /* Estaba en #85C1E9 */
+    --font: 'Lato', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif; 
+body {
+    font-family: var(--font);
+    position: relative;
 }
 
-.main-header {
-    background-color: bisque;
+.inactive {
+    display:none !important;
 }
 
-.url-links {
-    color: darkred;
-    text-decoration: overline;
-    font-weight: 900;
-}
-
-.url-links:hover {
-    color: dodgerblue;
-}
-
-.list {
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    height: 50px;
     display: flex;
-    margin: 10px;
+    align-items: center;
+    padding-right: 10px;
+}
+
+header img {
+    height: 30px;
+    width: 20px;
+    align-items: center;
+    margin-left: 15px;
+    display: none;
+}
+
+/* Navbar */
+header nav {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+/* Listado navbar */
+header ul {
+    width: 100%;
+    display: flex;
     columns: 4;
     list-style: none;
     text-align: center;
+    height: 100%;
+    padding-left: 30px;
+}
+/*Elementos listado navbar */
+header ul li {
+    place-items: center;
+    margin: 10px;
+}
+
+/* Color y estilo de los links en la navegación */
+header a {
+    color: var(--main-color); /* Estaba en darkred */
+    text-decoration: overline;
+    font-weight: 900;
+}
+/* Color al pasar el mouse sobre los estilos */
+header a:hover {
+    color: black;
+    background-color: lightgrey;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+#lang-container {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+#lang-container img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Mobile menu */
+aside {
+    background-color: dodgerblue;
+    width: 150px;
+    height: fit-content;
+    margin: 0;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: absolute;
+}
+
+aside ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
 }
 
 .list-item {
-    margin: 5px;
+    margin-bottom: 20px;
+}
+.list-item a {
+    color: white;
+    text-decoration: none;
 }
 
-.profile-pic-container {
-    margin: 15px;
-    text-align: center;
+/* Estilo principal del main */
+main {
+    background-color: var(--main-color);
+    padding: 10px;
 }
-
-.profile-pic {
-    width: 340px;
-    height: 360px;
+/* Estilo nombre y cargo */
+main div:nth-child(1) {
+    margin-bottom: 15px;
 }
-
+/* Estilo contenedor nombre */
 .name-cont {
     margin: 15px;
-    background-color: #85C1E9;
 }
-
+/* Estilo nombre */
 .name {
-    color: indianred;
+    color: #117A65;
     text-align: center;
     font-size: xx-large;
     font-weight: 900;
 }
-
-.name-2 {
-    color: #117A65;
-}
-
+/* Estilo Junior Developer */
 .title {
     text-align: center;
     font-size: x-large;
     font-weight: 650;
 }
-
-.contact-cont {
+/* Contenedor imagen, contacto y about me */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+/* Contenedor imagen */
+.profile-pic-container {
     margin: 15px;
+    text-align: center;
+}
+/* Estilo de la imagen */
+.profile-pic {
+    width: 340px;
+    height: 360px;
+    border-radius: 100%;
+}
+/* Estilo de las listas dentro del contenedor de imagen, contacto y about me */
+.container ul {
+    margin-top: 30px;
 }
 
+.project-name {
+    font-weight: 700;
+}
+.project-link {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.project-link:hover {
+    color:#000000;
+    padding: 10px;
+}
+
+/* Estilo lista de redes sociales */
 .social-media-list {
     display: flex;
     list-style: none;
@@ -78,21 +191,54 @@ body{
     text-align: center;
     justify-content: center;
 }
+/* Estilo elemento redes sociales */
 .social-list-item {
     margin-left: 15px;
     margin-right: 15px;
 }
-
+/* Estilo imagenes svg */
 .social-media {
     height: 30px;
     width: 30px;
 }
 
+/*Contenedor about me*/
+.aboutme {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    text-align: justify;
+    font-family: var(--font);
+    color: var(--main-color);
+    font-size: large;
+    border-radius: 20px;
+}
+
+.aboutme h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.aboutme ul {
+    list-style: none;
+}
+
+.aboutme span {
+    font-weight: 700;
+}
+
+/* Contenedor tech skills */
 .tech-skills {
     margin: 15px;
     align-items: center;
     justify-content: center;
-    background-color: #85C1E9;
+    /* background-color: #85C1E9; */
 }
 
 .tech-skills-title {
@@ -104,7 +250,7 @@ body{
     color: #117A65;
 }
 
-.skills-list {
+.tech-skills ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -152,4 +298,50 @@ body{
     margin-top: 15px;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 640px) {
+    body {
+        position: relative;
+    }
+
+    header {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header img {
+        display: flex;
+        /* align-items: center; */
+        position: relative;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    aside {
+        display: block;
+    }
+    aside li a {
+        font-weight: 700;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .tech-skills ul {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 641px) {
+    aside {
+        display: none;
+    }
 }

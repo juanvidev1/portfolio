@@ -1,0 +1,190 @@
+:root {
+    --main-color: white;
+    --secondary-color: dodgerblue; /* Estaba en #85C1E9 */
+    --font: 'Lato', sans-serif;
+}
+/* Estilo general */
+body {
+    font-family: var(--font);
+    position: relative;
+    margin: 0;
+}
+
+.inactive {
+    display: none
+}
+/*Estilo del header */
+header {
+    width: 100%;
+    display: flex;
+    background-color: var(--secondary-color);
+    justify-content: space-between;
+    align-items: center;
+}
+/* Le quita estilos por defect a la opción de volver tanto a la lista como al link */
+nav ul {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 700;
+}
+/* Le aplica negro y un padding al link de volver */
+nav a:hover {
+    padding-left: 15px;
+    color: black;
+}
+/* Estilos del contenedor del cambio de idioma. Se utilizará para filtrar videos en inglés */
+#lang-container {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+/* Estilos de la imagen del contenedor */
+#lang-container img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    /* cursor: pointer; */
+}
+
+#main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#news-container {
+    text-align: center;
+    padding: 12px;
+}
+
+#news-container h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.country-selector-cont {
+    background-color: lightgray;
+}
+
+.country-selector-cont label {
+    font-size: large;
+    font-weight: 600;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.country-selector-cont select {
+    margin: 10px;
+}
+
+#news-container table {
+    width: 100%;
+}
+
+#table-header {
+    font-size: large;
+    font-weight: 900;
+}
+#table-header tr {
+    margin-bottom: 40px;
+}
+#table-header td {
+    text-align: center;
+    border: solid 1px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#news-table-body td {
+    text-align: center;
+    border: solid 1px;
+    padding: 10px;
+}
+
+.date-content {
+    width: 100%;
+    height: 100%;
+}
+
+.news-image img {
+    width: 70%;
+    height: 100%;
+    place-self: center;
+    /* object-fit: cover; */
+}
+
+.article-title p {
+    text-align: justify;
+    padding: 10px;
+}
+.article-title a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    /* padding-left: 20px; */
+    cursor: pointer;
+}
+
+.article-title a:hover {
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+
+aside {
+    background-color: aqua;
+    width: 13%;
+    height: 100%;
+    margin: 0;
+}
+
+/* Clases noticias en mobile */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+}
+
+.card-content {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+}
+.news-date p {
+    font-size: small;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card-left, .news-title {
+    width: 100px;
+    height: 90px;
+}
+.card-left {
+    text-align: center;
+}
+.news-title {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+
+@media (max-width: 640px) {
+   #lang-container {
+       margin-right: 24px;
+   }
+}
