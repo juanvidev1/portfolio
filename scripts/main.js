@@ -138,7 +138,7 @@ function changeLanguage(language) {
     if (language == 'spanish') {
         aboutMeTitle.textContent = spanish[0];
         contentParagraph.textContent = spanish[1];
-        languageSelector.setAttribute('src', '../assets/us.svg');
+        languageSelector.setAttribute('src', './assets/us.svg');
         blogLink.textContent = 'Noticias';
         projectsLink.textContent = 'Proyectos';
         projectsMobileLink.textContent = 'Proyectos';
@@ -150,7 +150,7 @@ function changeLanguage(language) {
     if (language == 'english') {
         aboutMeTitle.textContent = english[0];
         contentParagraph.textContent = english[1];
-        languageSelector.setAttribute('src', '../assets/co.svg');
+        languageSelector.setAttribute('src', './assets/co.svg');
         blogLink.textContent = 'News';
         projectsLink.textContent = 'Projects';
         projectsMobileLink.textContent = 'Projects';
