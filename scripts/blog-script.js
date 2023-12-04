@@ -101,13 +101,13 @@ languageSelectorDiv.addEventListener('click', function() {
 
 function changeLanguage(language) {
     if (language == 'spanish') {
-        languageSelector.setAttribute('src', '../assets/us.svg');
+        languageSelector.setAttribute('src', './assets/us.svg');
         
         aboutMeLink.textContent = 'Volver';
     }
 
     if (language == 'english') {
-        languageSelector.setAttribute('src', '../assets/co.svg');
+        languageSelector.setAttribute('src', './assets/co.svg');
         
         aboutMeLink.textContent = 'Go back';
     }
