@@ -2,6 +2,10 @@ const newsMainContent = document.getElementById('news-container');
 const newsContainer = null || document.getElementById('news-table-body');
 const countrySelector = document.getElementById('country-selector');
 const newsTable = document.querySelector('.news-table');
+const cardsContainer = document.querySelector('.cards-container');
+const languageSelectorDiv = document.querySelector('.lang-container');
+const languageSelector = document.querySelector('.language-selector');
+const aboutMeLink = document.querySelector('#aboutme');
 
 const countryUrl = 'https://newsi-api.p.rapidapi.com/api/Supported-language-and-countries';
 let newsUrl = 'https://newsi-api.p.rapidapi.com/api/local?language=en&country=us&sort=top&page=1&limit=10';
@@ -88,6 +92,27 @@ async function fetchCountries() {
 
 }
 
+let currentLanguage = 'spanish';
+languageSelectorDiv.addEventListener('click', function() {
+    currentLanguage = (currentLanguage === 'spanish') ? 'english' : 'spanish';
+    
+    changeLanguage(currentLanguage);
+});
+
+function changeLanguage(language) {
+    if (language == 'spanish') {
+        languageSelector.setAttribute('src', '../assets/us.svg');
+        
+        aboutMeLink.textContent = 'Volver';
+    }
+
+    if (language == 'english') {
+        languageSelector.setAttribute('src', '../assets/co.svg');
+        
+        aboutMeLink.textContent = 'Go back';
+    }
+}
+
 /** Obtiene los países y idiomas disponibles para el select y devuelve las noticias del país seleccionado en el idioma seleccionado */
 (async () => {
     try {
@@ -96,6 +121,7 @@ async function fetchCountries() {
         let languageCode = '';
         let countryCode = '';
         let view = '';
+        let mobileView = '';
         
         /* Este fpr genera las opciones con los países e idiomas disponibles en la api del servicio */
         for (country of countriesData) {
@@ -122,7 +148,7 @@ async function fetchCountries() {
             // Aquí hacemos la consulta al endpoint de noticias con la url ajustada
             const news = await fetchData(newsUrl);
 
-            // Aquí generamos la vista con las noticias obtenidas y las mostramos en el html.
+            // Aquí generamos la vista con las noticias obtenidas y las mostramos en el html páginas grandes.
             view = news.map(article => `
                 <tr>
                     <td>
@@ -145,6 +171,23 @@ async function fetchCountries() {
                 </tr>
             `).join('');
             newsContainer.innerHTML = view;
+
+            // También generamos la vista con las noticias obtenidas y las mostramos en el html páginas mobile.
+            mobileView = news.map(article => `
+            <div class="card-content">
+                <div class="card-left">
+                    <div class="news-image">
+                        <img src="${article.image}" alt="">
+                    </div>
+                    <div class="news-date">${formatDate(article.publishedAt)}</div>
+                </div>
+                <div class="news-title">
+                    <a href="${article.link}" target="_blank">${article.title}</a>
+                </div>
+            </div>
+
+            `).join('');
+            cardsContainer.innerHTML = mobileView;
         });
 
         // Aquí mostramos las noticias de US por defecto
@@ -173,6 +216,22 @@ async function fetchCountries() {
             </tr>
         `).join('');
         newsContainer.innerHTML = view;
+
+        mobileView = news.map(article => `
+            <div class="card-content">
+                <div class="card-left">
+                    <div class="news-image">
+                        <img src="${article.image}" alt="">
+                    </div>
+                    <div class="news-date">${formatDate(article.publishedAt)}</div>
+                </div>
+                <div class="news-title">
+                    <a href="${article.link}" target="_blank">${article.title}</a>
+                </div>
+            </div>
+
+        `).join('');
+        cardsContainer.innerHTML = mobileView;
     } catch (error) {
         console.log(error);
     }

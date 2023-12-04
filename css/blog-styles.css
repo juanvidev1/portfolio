@@ -151,12 +151,15 @@ aside {
     flex-direction: column;
     width: 100%;
     margin: 10px;
+    display: none;
 }
 
 .card-content {
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    margin-bottom: 20px;
+    height: 105px;
 }
 
 .news-image img {
@@ -179,12 +182,32 @@ aside {
 .news-title {
     display: flex;
     align-items: center;
-    font-size: 10px;
+    height: 100%;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 
 @media (max-width: 640px) {
+    #main-container {
+        flex-direction: column;
+    }
+
    #lang-container {
        margin-right: 24px;
-   }
+    }
+
+   #news-container table {
+    display: none;
+    }
+
+    .cards-container {
+        display: flex;
+    }
+
+    .news-date {
+        font-size: small;
+        padding: 5px;
+    }
 }
