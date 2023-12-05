@@ -57,7 +57,7 @@ async function fetchCountries() {
 
         // console.log(otherArray);
 
-        for (country of otherArray) {
+        for (let country of otherArray) {
             // console.log(country.countryDetail[0]['Country code']);
             let countryCode = country.countryDetail[0]['Country code'];
             let language = country.countryDetail[0]['Language code'];
@@ -124,7 +124,7 @@ function changeLanguage(language) {
         let mobileView = '';
         
         /* Este fpr genera las opciones con los países e idiomas disponibles en la api del servicio */
-        for (country of countriesData) {
+        for (let country of countriesData) {
             let view = `
             <option id="selected-country" value="${country.language}-${country.countryCode}"> ${country.languageName} - ${country.countryName}</option>
             `;
