@@ -16,6 +16,7 @@ const experience = document.querySelector('.experience-content');
 const languageSelectorDiv = document.querySelector('.lang-container');
 const languageSelector = document.querySelector('.language-selector');
 const blogLink = document.querySelector('#blog');
+const blogLinkMobile = document.querySelector('#blog-mobile');
 
 
 
@@ -145,6 +146,7 @@ function changeLanguage(language) {
         aboutMeLink.textContent = 'Sobre Juanvi';
         aboutmeMobileLink.textContent = 'Sobre Juanvi';
         document.querySelector('.projects-content-title').textContent = 'Proyectos';
+        blogLinkMobile.textContent = 'Noticias';
     }
 
     if (language == 'english') {
@@ -157,6 +159,7 @@ function changeLanguage(language) {
         aboutMeLink.textContent = 'About Juanvi';
         aboutmeMobileLink.textContent = 'About Juanvi';
         document.querySelector('.projects-content-title').textContent = 'Projects';
+        blogLinkMobile.textContent = 'News';
     }
 }
 
